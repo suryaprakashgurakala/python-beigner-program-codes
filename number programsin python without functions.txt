@@ -1,0 +1,234 @@
+# amstrong number:
+
+n= int(input("enter a number"))
+length= len(str(n))
+copp=n
+summ=0
+while n!=0:
+    rem=n%10
+    summ+= rem**length
+    n//=10
+if summ==copp:
+    print("the given number is amstrong")
+else:
+    print(" the not a amstrong")
+#2
+'n= int(input("enter a number"))
+length= len(str(n))
+copp=n
+summ=0
+for i in range(length):
+    rem=n%10
+    summ+= rem**length
+    n//=10
+if summ==copp:
+    print("the given number is amstrong")
+else:
+    print(" the not a amstrong")'
+    
+# disriaum number
+n= int(input("enter a number"))
+length= len(str(n))
+copp=n
+summ=0
+while n!=0:
+    rem=n%10
+    summ+= rem**length
+    length-=1
+    n//=10
+if summ==copp:
+    print("the given number is disrium")
+else:
+    print(" the not a disrium")
+# perefect number
+
+n= int(input(" enter the number"))
+summ=0
+
+for i in range(1,n):
+    if n%i==0:
+        summ+=i
+
+if n==summ:
+    print (" the number perfect")
+else:
+    print(" not a perfect number")
+
+    
+#3 perfect number
+def find_divisors_sum(num):
+    divisors_sum = 0
+    for i in range(1, num):
+        if num % i == 0:
+            divisors_sum += i
+    return divisors_sum
+
+print("Perfect numbers between 1 and 100:")
+for num in range(1, 101):
+    if num == find_divisors_sum(num):
+        print(num)
+n= int(input(" enter the number"))
+summ=0
+i=1
+
+while i<n:
+    print(i)
+    if n%i==0:
+        summ+=i
+        print(i)
+    i+=1
+    print(summ)
+
+if n==summ:
+    print (" the number perfect")
+else:
+    print(" not a perfect number")
+
+#3.1
+n= int(input(" enter the number"))
+summ=0
+i=1
+
+for i in range(1,n):
+
+    if n%i==0:
+        summ+=i
+       
+if n==summ:
+    print (" the number perfect")
+else:
+    print(" not a perfect number")
+    
+#prime number:
+n = int(input("enter the number"))
+summ=0
+for i in range(1,n+1):
+    if n%i==0:
+        summ+=1
+if summ==2:
+    print("prime")
+else:
+    print("not")
+#4.1
+n = int(input("enter the number"))
+summ=0
+i=1
+while i<=n+1:
+    
+    if n%i==0:
+        summ+=1
+    i+=1
+if summ==2:
+    print("prime")
+else:
+    print("not")
+#5 compiste 
+n = int(input("enter the number"))
+summ=0
+for i in range(1,n+1):
+    if n%i==0:
+        summ+=1
+if summ!=2:
+    print("compiste")
+else:
+    print("n0t")'
+
+
+# harshad number :
+n= int(input("enter the number"))
+copy=n
+summ=0
+while n!=0:
+    rem=n%10
+    summ+=rem
+    n//=10
+if copy%summ==0:
+    print("harshad")
+else:
+    print("not")
+# 5.1
+'n= int(input("enter the number"))
+lem=len(str(n))
+print(lem)
+copy=n
+summ=0
+for i in range(lem+1):
+    rem=n%10
+    summ+=rem
+   
+if copy%summ==0:
+    print("harshad")
+else:
+    print("not")
+#neon number:
+n =int(input("enter the number"))
+square=n**2
+print(square)
+copy=n
+summ=0
+while square!=0:
+    rem=square%10
+    summ+=rem
+   
+    square//=10
+if copy==summ:
+    print("neo")
+else:
+    print("not")
+#emprip
+n= int(input("enter the number"))
+summ=0
+copy=n
+c=0
+c1=0
+while n!=0:
+    rem=n%10
+    summ=summ*10+rem
+    n//=10
+
+for i in range(1,copy+1):
+    if copy%i==0:
+        c+=1
+for j in range(1,summ+1):
+    if summ%j==0:
+        c1+=1
+if summ!=copy and c==2 and c==2:
+    print(" emirp number")
+else:
+    print(" not a emrip number")
+#
+n= int(input("enter the number"))
+summ=0
+copy=n
+c=0
+c1=0
+while n!=0:
+    rem=n%10
+    summ=summ*10+rem
+    n//=10
+
+for i in range(1,copy+1):
+    if copy%i==0:
+        c+=1
+if summ==copy and c==2:
+    print(" pali prime")
+else:
+    print(" not a prime")
+
+
+# paliprime
+n=151
+num=n
+res=0
+while n!=0:
+    rem=n%10
+     res=res*10+rem
+     n=n//10
+if num==res:
+     if num>1:
+     for a in range(2,num//2+1):
+     if num%a==0:
+         print("is not poly prime")
+         break
+     else:
+         print("is poly prime")
